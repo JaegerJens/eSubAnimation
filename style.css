@@ -1,3 +1,4 @@
+/* general layout with flexbox */
 #header {
     background: blue;
     position: fixed;
@@ -31,9 +32,15 @@
     height: 80px;
 }
 
+/* navigation widgets with fixed height
+   total height: 100vh + 100vh - h(hierarchy-breadcrump)
+
+   HIERARCHY VIEW
+*/
 #hierarchy-tree {
     background-color: lightsalmon;
-    height: 300px;
+    /* height: 100 vh - h(header) - h(footer) - h(hierarchy breadcrump) */
+    height: calc(100vh - 200px);
 }
 
 #hierarchy-breadcrumb {
@@ -41,15 +48,29 @@
     height: 40px;
 }
 
+/* SEQUENCE VIEW
+----------------------------
+   height of
+     hierarchy-breadcrump +
+     sequence-viewmode +
+     sequence-tree +
+     sequence-actionbar =
+     100vh - h(header) - h(footer)
+*/
+
 #sequence-viewmode {
-    background-color: darkgrey;
+    background-color: black;
     height: 40px;
     color: white;
 }
 
+/* sequence tree height =
+   100vh - 80px - 40px - 40px - 40px - 80px =
+   100vh - 280px
+*/
 #sequence-tree {
     background-color: darkcyan;
-    height: 300px;
+    height: calc(100vh - 280px);
 }
 
 #sequence-actionbar {

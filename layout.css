@@ -1,33 +1,29 @@
-/* general layout with flexbox */
+/* general layout with flexbox
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications
+*/
+body {
+    margin: 0;
+}
+#main {
+    display: flex;
+}
 #header {
     background: blue;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 100vw;
     height: 80px;
 }
 #navigation {
     background: yellow;
-    position: fixed;
-    top: 80px;
-    left: 0;
     width: 240px;
-    bottom: 80px;
+    height: calc(100vh - 160px);
 }
 #content {
     background: green;
-    position: fixed;
-    top: 80px;
-    left: 240px;
-    right: 0;
-    bottom: 80px;
+    width: calc(100vw - 240px);
+    height: calc(100vh - 160px);
 }
 #footer {
     background: blue;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100vw;
     height: 80px;
 }

@@ -1,0 +1,29 @@
+/* SEQUENCE VIEW
+----------------------------
+   height of
+     hierarchy-breadcrump +
+     sequence-viewmode +
+     sequence-tree +
+     sequence-actionbar =
+     100vh - h(header) - h(footer)
+*/
+
+#sequence-viewmode {
+    background-color: black;
+    height: 40px;
+    color: white;
+}
+
+/* sequence tree height =
+   100vh - 80px - 40px - 40px - 40px - 80px =
+   100vh - 280px
+*/
+#sequence-tree {
+    background-color: darkcyan;
+    height: calc(100vh - 280px);
+}
+
+#sequence-actionbar {
+    background-color: grey;
+    height: 40px;
+}

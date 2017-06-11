@@ -1,0 +1,15 @@
+/* navigation widgets with fixed height
+   total height: 100vh + 100vh - h(hierarchy-breadcrump)
+
+   HIERARCHY VIEW
+*/
+#hierarchy-tree {
+    background-color: lightsalmon;
+    /* height: 100 vh - h(header) - h(footer) - h(hierarchy breadcrump) */
+    height: calc(100vh - 200px);
+}
+
+#hierarchy-breadcrumb {
+    background-color: darkorange;
+    height: 40px;
+}

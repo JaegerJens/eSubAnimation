@@ -1,0 +1,33 @@
+/* general layout with flexbox */
+#header {
+    background: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+#navigation {
+    background: yellow;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 240px;
+    bottom: 80px;
+}
+#content {
+    background: green;
+    position: fixed;
+    top: 80px;
+    left: 240px;
+    right: 0;
+    bottom: 80px;
+}
+#footer {
+    background: blue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}

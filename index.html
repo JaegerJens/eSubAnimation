@@ -9,8 +9,26 @@
     <div id="header">Header</div>
     <div id="main">
         <div id="navigation">
-            <div id="hierarchy-tree">Hierarchy View</div>
-            <div id="hierarchy-breadcrumb">Hierarchy bread crump</div>
+            <div id="hierarchy-tree">
+                Hierarchy View
+                <ul>
+                    <li>S5
+                        <ul>
+                            <li>Extedorin
+                                <ul>
+                                    <li><a href="#" onclick="openSequence()">0000</a></li>
+                                    <li><a href="#" onclick="openSequence()">0001</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                <ul>
+            </div>
+            <div id="hierarchy-breadcrumb">
+                <a href="#" onclick="openHierarchy()">S5</a> &gt;
+                <a href="#" onclick="openHierarchy()">Extedorin</a> &gt;
+                <a href="#" onclick="openHierarchy()">0000</a>
+            </div>
             <div id="sequence-viewmode">
                 <input type="radio">Delta
                 <input type="radio">Current
@@ -27,5 +45,13 @@
         <div id="content">Document content</div>
     </div>
     <div id="footer">Footer</div>
+<script>
+function openSequence() {
+    alert('open sequence');
+}
+function openHierarchy() {
+    alert('open hierarchy');
+}
+</script>
 </body>
 </html>

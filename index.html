@@ -39,7 +39,7 @@
             <div id="sequence-actionbar">
                 <button>View</button>
                 <button onclick="showAttributeView()">Attributes</button>
-                <button>Lifecycle</button>
+                <button onClick="showLifecycleView()">Lifecycle</button>
             </div>
         </div>
 
@@ -47,6 +47,7 @@
     </div>
     <div id="footer">Footer</div>
     <div id="attribute" class="hideAttributes">Attribute view</div>
+    <div id="lifecycle" class="hideAttributes">Lifecycle view</div>
 <script>
 const navElem = document.getElementById("navigation");
 const duration = "2s";
@@ -78,6 +79,24 @@ function showAttributeView() {
         attElem.style.animationDuration = duration;
         attElem.classList.remove("hideAttributes");
         isAttVisible = true;
+    }
+}
+
+const lifeElem = document.getElementById("lifecycle");
+var isLifeVisible = false;
+function showLifecycleView() {
+    if (isLifeVisible) {
+        console.log('hide lifecycle view');
+        lifeElem.style.animationName = "hideProp";
+        lifeElem.style.animationDuration = duration;
+        lifeElem.classList.add("hideAttributes");
+        isLifeVisible = false;
+    } else {
+        console.log('show lifecycle view');
+        lifeElem.style.animationName = "showProp";
+        lifeElem.style.animationDuration = duration;
+        lifeElem.classList.remove("hideAttributes");
+        isLifeVisible = true;
     }
 }
 

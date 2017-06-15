@@ -40,6 +40,15 @@ body {
     bottom: 80px;
     height: 200px;
 }
+#lifecycle {
+    z-index: 4;
+    position: absolute;
+    background-color: lightpink;
+    right: 0;
+    left: 240px;
+    bottom: 80px;
+    height: 200px;
+}
 
 #footer {
     position: absolute;

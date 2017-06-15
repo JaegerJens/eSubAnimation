@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="hierarchy.css">
     <link rel="stylesheet" type="text/css" href="sequence.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
 </head>
 <body>
     <div id="header">Header</div>
@@ -49,15 +50,11 @@
 var navElem = document.getElementById("navigation");
 function openSequence() {
     console.log('open sequence');
-    translateY(navElem, "calc(200px - 100vh)");
+    navElem.classList.add("showSequence");
 }
 function openHierarchy() {
     console.log('open hierarchy');
-    translateY(navElem, "0");
-}
-
-function translateY(elem, y) {
-    elem.style.transform = "translateY(" + y + ")";
+    navElem.classList.remove("showSequence");
 }
 </script>
 </body>

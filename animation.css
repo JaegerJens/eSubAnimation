@@ -1,0 +1,3 @@
+.showSequence { 
+    transform: translateY(calc(200px - 100vh));
+}

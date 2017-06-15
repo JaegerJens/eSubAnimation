@@ -46,11 +46,18 @@
     </div>
     <div id="footer">Footer</div>
 <script>
+var navElem = document.getElementById("navigation");
 function openSequence() {
-    alert('open sequence');
+    console.log('open sequence');
+    translateY(navElem, "calc(200px - 100vh)");
 }
 function openHierarchy() {
-    alert('open hierarchy');
+    console.log('open hierarchy');
+    translateY(navElem, "0");
+}
+
+function translateY(elem, y) {
+    elem.style.transform = "translateY(" + y + ")";
 }
 </script>
 </body>

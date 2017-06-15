@@ -1,3 +1,13 @@
 .showSequence { 
     transform: translateY(calc(200px - 100vh));
 }
+
+@keyframes showSequenceAnim {
+    from { transform: translateY(0); }
+    to   { transform: translateY(calc(200px - 100vh)); }
+}
+
+@keyframes showHierarchy {
+    from { transform: translateY(calc(200px - 100vh)); }
+    to { transform: translateY(0); }
+}

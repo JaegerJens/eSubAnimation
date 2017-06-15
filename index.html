@@ -47,13 +47,18 @@
     </div>
     <div id="footer">Footer</div>
 <script>
-var navElem = document.getElementById("navigation");
+const navElem = document.getElementById("navigation");
+const duration = "2s";
 function openSequence() {
     console.log('open sequence');
+    navElem.style.animationName = "showSequenceAnim";
+    navElem.style.animationDuration = duration;
     navElem.classList.add("showSequence");
 }
 function openHierarchy() {
     console.log('open hierarchy');
+    navElem.style.animationName = "showHierarchy";
+    navElem.style.animationDuration = duration;
     navElem.classList.remove("showSequence");
 }
 </script>

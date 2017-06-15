@@ -31,6 +31,15 @@ body {
     height: calc(100vh - 160px);
     z-index: 0;
 }
+#attribute {
+    z-index: 3;
+    position: absolute;
+    background-color: lightskyblue;
+    right: 0;
+    left: 240px;
+    bottom: 80px;
+    height: 200px;
+}
 
 #footer {
     position: absolute;

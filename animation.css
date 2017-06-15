@@ -2,6 +2,10 @@
     transform: translateY(calc(200px - 100vh));
 }
 
+.hideAttributes {
+    transform: translateY(200px);
+}
+
 @keyframes showSequenceAnim {
     from { transform: translateY(0); }
     to   { transform: translateY(calc(200px - 100vh)); }
@@ -9,5 +13,16 @@
 
 @keyframes showHierarchy {
     from { transform: translateY(calc(200px - 100vh)); }
-    to { transform: translateY(0); }
+    to   { transform: translateY(0); }
 }
+
+@keyframes showProp {
+    from { transform: translateY(200px); }
+    to   { transform: translateY(0px); }
+}
+
+@keyframes hideProp {
+    from { transform: translateY(0px); }
+    to   { transform: translateY(200px); }
+}
+

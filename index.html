@@ -38,7 +38,7 @@
             <div id="sequence-tree">Sequence View</div>
             <div id="sequence-actionbar">
                 <button>View</button>
-                <button>Attributes</button>
+                <button onclick="showAttributeView()">Attributes</button>
                 <button>Lifecycle</button>
             </div>
         </div>
@@ -46,6 +46,7 @@
         <div id="content">Document content</div>
     </div>
     <div id="footer">Footer</div>
+    <div id="attribute" class="hideAttributes">Attribute view</div>
 <script>
 const navElem = document.getElementById("navigation");
 const duration = "2s";
@@ -61,6 +62,25 @@ function openHierarchy() {
     navElem.style.animationDuration = duration;
     navElem.classList.remove("showSequence");
 }
+
+const attElem = document.getElementById("attribute");
+var isAttVisible = false;
+function showAttributeView() {
+    if (isAttVisible) {
+        console.log('hide attribute view');
+        attElem.style.animationName = "hideProp";
+        attElem.style.animationDuration = duration;
+        attElem.classList.add("hideAttributes");
+        isAttVisible = false;
+    } else {
+        console.log('show attribute view');
+        attElem.style.animationName = "showProp";
+        attElem.style.animationDuration = duration;
+        attElem.classList.remove("hideAttributes");
+        isAttVisible = true;
+    }
+}
+
 </script>
 </body>
 </html>
